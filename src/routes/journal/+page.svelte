@@ -52,17 +52,14 @@
 
 <style>
     .journal-container {
-        padding: 4rem 2rem;
+        padding: var(--section-padding) 2rem;
         max-width: 1000px;
         margin: 0 auto;
     }
 
     .gradient-text {
         font-size: 3rem;
-        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--primary);
         margin-bottom: 3rem;
     }
 
@@ -77,7 +74,7 @@
         grid-template-columns: 300px 1fr;
         gap: 2rem;
         padding: 1.5rem;
-        border-radius: 20px;
+        border-radius: var(--border-radius);
         overflow: hidden;
     }
 
@@ -85,14 +82,14 @@
         width: 100%;
         height: 100%;
         aspect-ratio: 1/1;
-        background: #eee;
+        background: var(--gray-light);
         object-fit: cover;
-        border-radius: 12px;
+        border-radius: calc(var(--border-radius) / 2);
     }
 
     .date {
         font-size: 0.9rem;
-        color: #888;
+        color: var(--gray);
         text-transform: uppercase;
         letter-spacing: 1px;
     }
@@ -100,18 +97,19 @@
     .post-content h2 {
         margin: 0.5rem 0 1rem;
         font-size: 1.75rem;
+        color: var(--dark);
     }
 
     .read-more {
         display: inline-block;
         margin-top: 1rem;
-        color: #009efd;
+        color: var(--primary);
         font-weight: 600;
         text-decoration: none;
     }
 
     .glass {
-        background: rgba(255, 255, 255, 0.7);
+        background: var(--glass);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
     }

@@ -119,17 +119,19 @@
     .policy-container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 8rem 1rem 4rem;
+        padding: calc(var(--header-height) + var(--section-padding)) 1rem
+            var(--section-padding);
     }
 
     .content {
         padding: 3rem;
-        border-radius: 2rem;
+        border-radius: var(--border-radius);
     }
 
     .gradient-text {
         font-size: 3rem;
         margin-bottom: 0.5rem;
+        color: var(--primary);
     }
 
     .effective-date {
@@ -148,11 +150,15 @@
     .policy-text p {
         margin-bottom: 1rem;
         line-height: 1.8;
+        color: var(--dark);
+        opacity: 0.9;
     }
 
     .policy-text ul {
         margin-bottom: 1.5rem;
         padding-left: 1.5rem;
+        color: var(--dark);
+        opacity: 0.9;
     }
 
     .policy-text li {
@@ -161,23 +167,26 @@
     }
 
     pre {
-        background: rgba(0, 0, 0, 0.05);
+        background: var(--gray-light);
         padding: 1rem;
-        border-radius: 0.5rem;
+        border-radius: calc(var(--border-radius) / 2);
         margin-bottom: 1.5rem;
         overflow-x: auto;
     }
 
     code {
         font-family: monospace;
+        color: var(--dark);
     }
 
     a {
         color: var(--primary);
         text-decoration: none;
+        transition: var(--transition);
     }
 
     a:hover {
+        color: var(--primary-dark);
         text-decoration: underline;
     }
 </style>

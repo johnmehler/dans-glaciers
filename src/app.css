@@ -1,14 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;700&display=swap');
 
 :root {
+  /* Colors */
   --primary: #009efd;
+  --primary-dark: #007cf0;
   --secondary: #2af598;
   --dark: #0f172a;
   --light: #f8fafc;
   --gray: #64748b;
+  --gray-light: #f1f5f9;
+  --white: #ffffff;
+  --black: #000000;
+  --cream: #fcf5e5;
+
+  /* Component Colors */
+  --header-bg: var(--black);
+  --header-text: var(--cream);
+  --footer-bg: var(--black);
+  --footer-text: var(--cream);
   --glass: rgba(255, 255, 255, 0.7);
+
+  /* Fonts */
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
+
+  /* Sizing */
+  --header-height: 72px;
+  --container-width: 1200px;
+  --section-padding: 4rem;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --gap: 1.5rem;
 }
 
 * {
@@ -36,6 +58,7 @@ h4 {
 a {
   text-decoration: none;
   color: inherit;
+  transition: var(--transition);
 }
 
 img {
@@ -43,12 +66,10 @@ img {
   height: auto;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .glass {
@@ -60,8 +81,7 @@ img {
 
 main {
   width: 100%;
-  min-height: calc(100vh - 80px);
-  /* Adjust based on header height */
+  min-height: calc(100vh - var(--header-height));
 }
 
 /* Custom Scrollbar */

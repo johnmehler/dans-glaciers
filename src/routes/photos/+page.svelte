@@ -27,22 +27,19 @@
 
 <style>
     .photos-container {
-        padding: 4rem 2rem;
-        max-width: 1200px;
+        padding: var(--section-padding) 2rem;
+        max-width: var(--container-width);
         margin: 0 auto;
     }
 
     .header {
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: var(--section-padding);
     }
 
     .gradient-text {
         font-size: 3.5rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--primary);
     }
 
     .gallery {
@@ -53,8 +50,8 @@
 
     .photo-card {
         padding: 1rem;
-        border-radius: 16px;
-        transition: transform 0.3s ease;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
     }
 
     .photo-card:hover {
@@ -64,8 +61,8 @@
     .placeholder-img {
         width: 100%;
         aspect-ratio: 3/2;
-        background: #f0f0f0;
-        border-radius: 8px;
+        background: var(--gray-light);
+        border-radius: calc(var(--border-radius) / 2);
         object-fit: cover;
     }
 
@@ -76,16 +73,17 @@
     .meta h3 {
         margin: 0;
         font-size: 1.2rem;
+        color: var(--dark);
     }
 
     .meta p {
         margin: 0.25rem 0 0;
-        color: #666;
+        color: var(--gray);
         font-size: 0.9rem;
     }
 
     .glass {
-        background: rgba(255, 255, 255, 0.7);
+        background: var(--glass);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
     }

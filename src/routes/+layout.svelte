@@ -1,7 +1,8 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
-	import Header from '$lib/Header.svelte';
-	import Footer from '$lib/Footer.svelte';
+	import "../app.css";
+	import favicon from "$lib/assets/favicon.svg";
+	import Header from "$lib/Header.svelte";
+	import Footer from "$lib/Footer.svelte";
 </script>
 
 <svelte:head>
@@ -15,15 +16,16 @@
 	</main>
 	<Footer />
 </div>
+
 <style>
-.page-container {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-}
-main {
-	flex: 1 0 auto;
-	display: flex;
-	flex-direction: column;
-}
+	.page-container {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+	main {
+		flex: 1 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
 </style>

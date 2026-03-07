@@ -77,7 +77,7 @@
 <style>
 	.hero {
 		height: 90vh;
-		background: #1a2a3a; /* Fallback */
+		background-color: var(--dark);
 		background-image: url("/images/banner.jpg");
 		background-size: cover;
 		background-position: center;
@@ -86,7 +86,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		color: white;
+		color: var(--white);
 	}
 
 	.hero-overlay {
@@ -95,11 +95,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: linear-gradient(
-			to bottom,
-			rgba(0, 0, 0, 0.3),
-			rgba(0, 0, 0, 0.6)
-		);
+		background: rgba(0, 0, 0, 0.4);
 	}
 
 	.hero-content {
@@ -129,23 +125,23 @@
 		border-radius: 50px;
 		font-weight: 600;
 		text-decoration: none;
-		transition: all 0.3s ease;
+		transition: var(--transition);
 		margin: 0.5rem;
 	}
 
 	.btn-primary {
-		background: #009efd;
-		color: white;
+		background: var(--primary);
+		color: var(--white);
 	}
 
 	.btn-primary:hover {
-		background: #007cf0;
+		background: var(--primary-dark);
 		transform: scale(1.05);
 	}
 
 	.btn-secondary {
 		background: rgba(255, 255, 255, 0.1);
-		color: white;
+		color: var(--white);
 		backdrop-filter: blur(5px);
 		border: 1px solid rgba(255, 255, 255, 0.3);
 	}
@@ -155,9 +151,9 @@
 	}
 
 	.container {
-		max-width: 1200px;
+		max-width: var(--container-width);
 		margin: 0 auto;
-		padding: 4rem 2rem;
+		padding: var(--section-padding) 2rem;
 	}
 
 	.section-header {
@@ -180,7 +176,7 @@
 		top: 1rem;
 		left: 1rem;
 		background: rgba(0, 0, 0, 0.6);
-		color: white;
+		color: var(--white);
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
 		font-size: 0.8rem;
@@ -190,8 +186,8 @@
 	.placeholder-img {
 		width: 100%;
 		aspect-ratio: 4/3;
-		background: #ddd;
-		border-radius: 8px;
+		background: var(--gray-light);
+		border-radius: var(--border-radius);
 		object-fit: cover;
 	}
 
@@ -211,11 +207,11 @@
 	.stats li {
 		font-size: 1.1rem;
 		margin-bottom: 0.75rem;
-		color: #444;
+		color: var(--gray);
 	}
 
 	.glass {
-		background: rgba(255, 255, 255, 0.8);
+		background: var(--glass);
 		backdrop-filter: blur(10px);
 	}
 

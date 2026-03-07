@@ -157,22 +157,20 @@
 
 <style>
     .contact-container {
-        padding: 8rem 2rem 4rem;
-        max-width: 1200px;
+        padding: calc(var(--header-height) + var(--section-padding)) 2rem
+            var(--section-padding);
+        max-width: var(--container-width);
         margin: 0 auto;
     }
 
     .header-section {
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: var(--section-padding);
     }
 
     .gradient-text {
         font-size: 4rem;
-        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--primary);
     }
 
     .lead {
@@ -185,18 +183,21 @@
         display: grid;
         grid-template-columns: 1fr 1.2fr;
         gap: 4rem;
-        margin-bottom: 6rem;
+        margin-bottom: var(--section-padding);
         align-items: start;
     }
 
     .intro-box h2 {
         margin-bottom: 1.5rem;
+        color: var(--dark);
     }
 
     .intro-box p {
         font-size: 1.15rem;
         line-height: 1.7;
         margin-bottom: 1.5rem;
+        color: var(--dark);
+        opacity: 0.8;
     }
 
     .direct-email a {
@@ -207,6 +208,7 @@
     .interest-list h3 {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
+        color: var(--dark);
     }
 
     .interest-list ul {
@@ -220,6 +222,8 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
+        color: var(--dark);
+        opacity: 0.8;
     }
 
     .interest-list li::before {
@@ -236,11 +240,12 @@
 
     .contact-form {
         padding: 3rem;
-        border-radius: 32px;
+        border-radius: var(--border-radius);
     }
 
     .contact-form h3 {
         margin-bottom: 2rem;
+        color: var(--dark);
     }
 
     .form-group {
@@ -252,17 +257,19 @@
         margin-bottom: 0.5rem;
         font-weight: 600;
         font-size: 0.9rem;
+        color: var(--dark);
     }
 
     input,
     textarea {
         width: 100%;
         padding: 1rem;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-        background: white;
+        border-radius: calc(var(--border-radius) / 2);
+        border: 1px solid var(--gray-light);
+        background: var(--white);
         font-size: 1rem;
-        transition: border-color 0.3s ease;
+        transition: var(--transition);
+        color: var(--dark);
     }
 
     input:focus,
@@ -274,20 +281,18 @@
     .submit-btn {
         width: 100%;
         background: var(--dark);
-        color: white;
+        color: var(--white);
         padding: 1rem;
         border-radius: 50px;
         font-weight: 700;
         cursor: pointer;
         border: none;
-        transition:
-            transform 0.3s ease,
-            background 0.3s ease;
+        transition: var(--transition);
         margin-bottom: 1rem;
     }
 
     .submit-btn:hover {
-        background: #334155;
+        background: var(--primary-dark);
         transform: translateY(-2px);
     }
 
@@ -298,24 +303,26 @@
     }
 
     .contribute-section {
-        padding: 4rem;
-        border-radius: 40px;
+        padding: var(--section-padding);
+        border-radius: var(--border-radius);
     }
 
     .contribute-header {
         max-width: 800px;
-        margin-bottom: 4rem;
+        margin-bottom: var(--section-padding);
     }
 
     .contribute-header h2 {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
+        color: var(--dark);
     }
 
     .contribute-header p {
         font-size: 1.2rem;
         line-height: 1.7;
-        color: #475569;
+        color: var(--dark);
+        opacity: 0.8;
     }
 
     .contribute-grid {
@@ -328,6 +335,7 @@
     .contribute-grid h3 {
         margin-bottom: 1.5rem;
         font-size: 1.4rem;
+        color: var(--dark);
     }
 
     .contribute-grid ul {
@@ -336,7 +344,8 @@
 
     .contribute-grid li {
         margin-bottom: 1rem;
-        color: #475569;
+        color: var(--dark);
+        opacity: 0.8;
     }
 
     .meta-list {
@@ -351,9 +360,9 @@
     }
 
     .cta-box {
-        background: white;
+        background: var(--white);
         padding: 2rem;
-        border-radius: 20px;
+        border-radius: var(--border-radius);
         margin-top: 2rem;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }

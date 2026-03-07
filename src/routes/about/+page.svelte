@@ -94,22 +94,20 @@
 
 <style>
     .goal-container {
-        padding: 8rem 2rem 4rem;
-        max-width: 1200px;
+        padding: calc(var(--header-height) + var(--section-padding)) 2rem
+            var(--section-padding);
+        max-width: var(--container-width);
         margin: 0 auto;
     }
 
     .header-section {
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: var(--section-padding);
     }
 
     .gradient-text {
         font-size: 4rem;
-        background: linear-gradient(135deg, #007cf0, #00dfd8);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--primary);
     }
 
     .lead {
@@ -127,7 +125,7 @@
 
     .mission-vision {
         padding: 3rem;
-        border-radius: 32px;
+        border-radius: var(--border-radius);
     }
 
     .section {
@@ -147,7 +145,8 @@
     p {
         font-size: 1.2rem;
         line-height: 1.8;
-        color: #444;
+        color: var(--dark);
+        opacity: 0.8;
     }
 
     .goals-list {
@@ -158,7 +157,8 @@
     .goals-list li {
         font-size: 1.15rem;
         margin-bottom: 0.75rem;
-        color: #334155;
+        color: var(--dark);
+        opacity: 0.8;
         display: flex;
         align-items: center;
         gap: 0.75rem;
@@ -173,7 +173,7 @@
     .recent-update {
         margin-top: 4rem;
         padding: 2.5rem;
-        border-radius: 24px;
+        border-radius: var(--border-radius);
         background: rgba(255, 255, 255, 0.4);
     }
 
@@ -195,12 +195,12 @@
 
     .vision-image {
         position: sticky;
-        top: 120px;
+        top: calc(var(--header-height) + 2rem);
     }
 
     .side-img {
         width: 100%;
-        border-radius: 24px;
+        border-radius: var(--border-radius);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
@@ -210,7 +210,7 @@
         left: 20px;
         right: 20px;
         padding: 1.5rem;
-        border-radius: 20px;
+        border-radius: var(--border-radius);
         display: flex;
         justify-content: space-around;
         text-align: center;

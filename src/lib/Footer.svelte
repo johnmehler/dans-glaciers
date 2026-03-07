@@ -1,88 +1,73 @@
-<footer class="footer glass">
-  <div class="footer-bottom">
-    <div class="footer-info">
-      <h3>Glacier Archive Project</h3>
-      <p>
-        Contact: <a href="mailto:admin@glacierarchive.org"
-          >admin@glacierarchive.org</a
-        >
-      </p>
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-links">
+      <a href="/privacy" class="footer-link">Privacy Policy</a>
+      <a href="/terms" class="footer-link">Terms of Use</a>
+      <a href="/contact" class="footer-link">Contact</a>
     </div>
-
-    <div class="footer-right">
-      <div class="legal-links">
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Use</a>
-      </div>
-      <div class="copyright">
+    <div class="footer-bottom">
+      <span class="copyright">
         © Glacier Archive Project {new Date().getFullYear()}
-      </div>
+      </span>
     </div>
   </div>
 </footer>
 
 <style>
   .footer {
-    padding: 4rem 2.5rem;
-    margin-top: 4rem;
-    background: white;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: var(--section-padding) 0 2rem 0;
+    margin-top: var(--section-padding);
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .footer-link {
+    color: var(--footer-text);
+    font-weight: 500;
+    opacity: 0.8;
+
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(252, 245, 229, 0.2); /* Semi-transparent cream */
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+
+  .footer-link:hover {
+    opacity: 1;
+    background: rgba(252, 245, 229, 0.1);
+    border-color: var(--footer-text);
   }
 
   .footer-bottom {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 0.95rem;
-  }
-
-  .footer-info h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  .footer-info p {
-    color: var(--gray);
-  }
-
-  .footer-right {
-    text-align: right;
-  }
-
-  .legal-links {
-    display: flex;
-    gap: 1.5rem;
     justify-content: flex-end;
-    margin-bottom: 1rem;
-  }
-
-  .legal-links a {
-    color: var(--gray);
-    transition: color 0.3s ease;
-  }
-
-  .legal-links a:hover {
-    color: var(--primary);
-  }
-
-  .copyright {
-    color: var(--gray);
+    padding-top: 2rem;
+    border-top: 1px solid rgba(252, 245, 229, 0.1);
     font-size: 0.85rem;
+    opacity: 0.6;
   }
 
   @media (max-width: 768px) {
-    .footer-bottom {
+    .footer-links {
       flex-direction: column;
       align-items: center;
-      text-align: center;
-      gap: 2rem;
+      gap: 1rem;
     }
-    .footer-right {
-      text-align: center;
-    }
-    .legal-links {
+    .footer-bottom {
       justify-content: center;
     }
   }

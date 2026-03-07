@@ -1,17 +1,11 @@
 <script>
-  let scrolled = false;
-  if (typeof window !== "undefined") {
-    window.onscroll = () => {
-      scrolled = window.scrollY > 50;
-    };
-  }
+  // Header is now static as per requirements
 </script>
 
-<header class:scrolled class="glass">
+<header>
   <nav class="container">
     <div class="logo">
       <a href="/">
-        <span class="logo-icon">🏔️</span>
         <span class="logo-text">GLACIER<b>ARCHIVE</b></span>
       </a>
     </div>
@@ -29,27 +23,18 @@
 
 <style>
   header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: static;
+    height: var(--header-height);
+    background: var(--header-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
     z-index: 1000;
-    transition: all 0.3s ease;
-    padding: 1.5rem 0;
-    background: transparent;
-    border-bottom: 1px solid transparent;
-  }
-
-  header.scrolled {
-    padding: 0.75rem 0;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   }
 
   .container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -63,7 +48,7 @@
     gap: 0.75rem;
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--dark);
+    color: var(--header-text);
     letter-spacing: -0.5px;
   }
 
@@ -74,15 +59,15 @@
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: var(--gap);
     align-items: center;
   }
 
   .nav-links a {
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--dark);
-    transition: color 0.3s ease;
+    color: var(--header-text);
+    transition: var(--transition);
     opacity: 0.8;
   }
 
@@ -92,12 +77,12 @@
   }
 
   .contact-cta {
-    background: var(--dark);
-    color: white !important;
+    background: var(--primary);
+    color: var(--white) !important;
     padding: 0.6rem 1.25rem;
     border-radius: 50px;
     opacity: 1 !important;
-    transition: transform 0.3s ease !important;
+    transition: var(--transition) !important;
   }
 
   .contact-cta:hover {
@@ -107,7 +92,7 @@
 
   @media (max-width: 768px) {
     .nav-links {
-      display: none; /* In a real app we'd add a burger menu */
+      display: none;
     }
   }
 </style>

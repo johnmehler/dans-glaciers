@@ -23,7 +23,6 @@
 
     <div class="method-grid">
         <div class="card glass">
-            <div class="icon">🔍</div>
             <h3>Historical Research</h3>
             <p>
                 We identify and catalog historical glacier photographs from
@@ -35,7 +34,6 @@
         </div>
 
         <div class="card glass">
-            <div class="icon">🏔️</div>
             <h3>Fieldwork</h3>
             <p>
                 Using maps, terrain analysis, and GIS data, we locate the
@@ -46,7 +44,6 @@
         </div>
 
         <div class="card glass">
-            <div class="icon">📊</div>
             <h3>Data Analysis</h3>
             <p>
                 Images are paired with additional datasets such as satellite
@@ -57,7 +54,6 @@
         </div>
 
         <div class="card glass">
-            <div class="icon">🤖</div>
             <h3>AI Tools</h3>
             <p>
                 We explore how artificial intelligence can assist with
@@ -110,22 +106,20 @@
 
 <style>
     .approach-container {
-        padding: 8rem 2rem 4rem;
-        max-width: 1200px;
+        padding: calc(var(--header-height) + var(--section-padding)) 2rem
+            var(--section-padding);
+        max-width: var(--container-width);
         margin: 0 auto;
     }
 
     .header-section {
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: var(--section-padding);
     }
 
     .gradient-text {
         font-size: 4rem;
-        background: linear-gradient(135deg, #2af598 0%, #009efd 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--primary);
     }
 
     .lead {
@@ -136,11 +130,11 @@
 
     .intro-glass {
         padding: 3rem;
-        border-radius: 32px;
-        margin-bottom: 4rem;
+        border-radius: var(--border-radius);
+        margin-bottom: var(--section-padding);
         font-size: 1.35rem;
         line-height: 1.8;
-        color: #334155;
+        color: var(--dark);
         text-align: center;
     }
 
@@ -153,17 +147,12 @@
 
     .card {
         padding: 2.5rem;
-        border-radius: 24px;
-        transition: transform 0.3s ease;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
     }
 
     .card:hover {
         transform: translateY(-8px);
-    }
-
-    .icon {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
     }
 
     .card h3 {
@@ -174,7 +163,7 @@
 
     .card p {
         font-size: 1.05rem;
-        color: #475569;
+        color: var(--gray);
         line-height: 1.7;
     }
 
@@ -207,12 +196,13 @@
     .section-content p {
         font-size: 1.2rem;
         line-height: 1.8;
-        color: #334155;
+        color: var(--dark);
+        opacity: 0.8;
     }
 
     .side-img {
         width: 100%;
-        border-radius: 24px;
+        border-radius: var(--border-radius);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 

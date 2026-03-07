@@ -75,7 +75,8 @@
 
 <style>
     .contributors-container {
-        padding: 8rem 2rem 4rem;
+        padding: calc(var(--header-height) + var(--section-padding)) 2rem
+            var(--section-padding);
         max-width: 1000px;
         margin: 0 auto;
     }
@@ -87,10 +88,7 @@
 
     .gradient-text {
         font-size: 3.5rem;
-        background: linear-gradient(135deg, #007cf0, #00dfd8);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--primary);
     }
 
     .lead {
@@ -108,16 +106,17 @@
 
     .headshot {
         width: 100%;
-        border-radius: 30px;
+        border-radius: var(--border-radius);
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         aspect-ratio: 1/1;
         object-fit: cover;
-        border: 8px solid white;
+        border: 8px solid var(--white);
     }
 
     .profile-text h2 {
         font-size: 2.5rem;
         margin-bottom: 0.25rem;
+        color: var(--dark);
     }
 
     .subtitle {
@@ -132,7 +131,8 @@
     .bio-content p {
         font-size: 1.15rem;
         line-height: 1.7;
-        color: #334155;
+        color: var(--dark);
+        opacity: 0.8;
         margin-bottom: 1.5rem;
     }
 
