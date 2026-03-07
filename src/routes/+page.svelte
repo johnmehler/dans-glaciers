@@ -78,7 +78,7 @@
 	.hero {
 		height: 90vh;
 		background: #1a2a3a; /* Fallback */
-		background-image: url("/1.png");
+		background-image: url("/images/banner.jpg");
 		background-size: cover;
 		background-position: center;
 		position: relative;

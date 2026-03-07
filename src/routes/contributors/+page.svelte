@@ -10,7 +10,7 @@
 
     <div class="contributor-profile">
         <div class="profile-image">
-            <img src="/2.png" alt="Dan Meier" class="headshot" />
+            <img src="/images/headshot.png" alt="Dan Meier" class="headshot" />
         </div>
 
         <div class="profile-text">

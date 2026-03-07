@@ -81,10 +81,10 @@
                     ecosystems.
                 </p>
             </div>
-            <div class="section-image">
+            <div class="tech-image">
                 <img
-                    src="/6.png"
-                    alt="Educational Fieldwork"
+                    src="/images/banner.jpg"
+                    alt="Glacier Fieldwork Banner"
                     class="side-img"
                 />
             </div>

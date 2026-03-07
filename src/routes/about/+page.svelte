@@ -16,44 +16,65 @@
             <div class="section">
                 <h2>Mission</h2>
                 <p>
-                    The Glacier Archive Project is an environmental
-                    documentation and research initiative focused on recording
-                    glacier change through repeat photography, geospatial
-                    analysis, and open scientific collaboration. By replicating
-                    historical glacier photographs and pairing them with modern
-                    imagery, the project creates a visual record of glacier
-                    retreat and its downstream impacts on ecosystems, water
-                    systems, and human communities.
+                    To document and communicate the changing state of the
+                    world’s glaciers through repeat photography, geospatial
+                    data, and open scientific collaboration, creating an
+                    accessible archive for researchers, educators, and the
+                    public.
                 </p>
             </div>
 
             <div class="section">
-                <h2>Open Science</h2>
+                <h2>Vision</h2>
                 <p>
-                    All photographs and associated metadata, including GPS
-                    coordinates, elevation, equipment specifications, and
-                    methods, are published in a public archive so researchers,
-                    educators, and future observers can build upon the dataset.
+                    A global, open archive of glacier imagery, data, and
+                    accessible educational content that enables scientists,
+                    citizen observers, and communities to better understand how
+                    glacier change affects ecosystems, economies, and societies.
                 </p>
             </div>
 
             <div class="section">
-                <h2>Analytical Innovation</h2>
-                <p>
-                    The project also incorporates emerging artificial
-                    intelligence tools to enhance analysis and communication.
-                    AI-assisted techniques help organize large image datasets,
-                    generate visual comparisons of glacier change across time,
-                    and produce clear, engaging graphics and visualizations that
-                    make complex glaciology and climate science more accessible
-                    to the public.
-                </p>
+                <h2>Project Goals</h2>
+                <ul class="goals-list">
+                    <li>Document landscape change</li>
+                    <li>Publish accessible expert discussion</li>
+                    <li>Share our field experience</li>
+                    <li>Build an AI-enabled public archive</li>
+                </ul>
+            </div>
+
+            <div class="section recent-update glass">
+                <h3>Recent Updates: GlacierArchive.org Launch</h3>
+                <p class="date">Date: March 7, 2026</p>
+                <div class="update-content">
+                    <p>The Glacier Archive website is now live.</p>
+                    <p>
+                        This site will serve as the public home for the Glacier
+                        Archive Project, an effort to document glacier change
+                        through repeat photography and field observations. Over
+                        the coming months we plan to revisit historic glacier
+                        viewpoints and recreate photographs taken decades or
+                        even more than a century ago.
+                    </p>
+                    <p>
+                        The goal is simple: build a visual record showing how
+                        glaciers have changed through time and make those
+                        comparisons accessible to the public.
+                    </p>
+                    <p>
+                        The project is currently pending final approval for the
+                        upcoming field expedition. Once confirmed, this site
+                        will host journal updates from the field, photo
+                        comparisons, and documentation of the locations visited.
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="vision-image">
             <img
-                src="/1.png"
+                src="/images/banner.jpg"
                 alt="Glacier Archive Landscape"
                 class="side-img"
             />
@@ -127,6 +148,49 @@
         font-size: 1.2rem;
         line-height: 1.8;
         color: #444;
+    }
+
+    .goals-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .goals-list li {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+        color: #334155;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .goals-list li::before {
+        content: "→";
+        color: var(--primary);
+        font-weight: bold;
+    }
+
+    .recent-update {
+        margin-top: 4rem;
+        padding: 2.5rem;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    .recent-update h3 {
+        margin-top: 0;
+        color: var(--primary);
+    }
+
+    .recent-update .date {
+        font-size: 0.9rem;
+        color: var(--gray);
+        margin-bottom: 1.5rem;
+    }
+
+    .update-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
     }
 
     .vision-image {
