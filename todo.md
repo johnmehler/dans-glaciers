@@ -1,4 +1,11 @@
-CSS: 
-1. Make header static. It should always be that grey color and should never resize or move
-2. Give the footer a black background and white text. It should have clean buttons for Privacy Policy, Terms of Use, and Contact in the middle. The copyright and year should be in the bottom right corner
-3. No gradients on any pages. All CSS should be sized and colored with variables in @app.css
+1. Move the pics from /static/images to /src/lib/assets
+2. Content: 
+    Mission
+    About the Authors
+    Our Approach
+    Privacy Policy
+    Terms of Use
+    Contact
+    Sample Lesson Plans (placeholder)
+    Why Glaciers Matter (mark as under development)
+3. 

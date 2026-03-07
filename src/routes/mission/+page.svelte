@@ -1,10 +1,10 @@
 <svelte:head>
-    <title>Our Goal - Glacier Archive Project</title>
+    <title>Mission - Glacier Archive Project</title>
 </svelte:head>
 
 <section class="goal-container">
     <div class="header-section">
-        <h1 class="gradient-text">Our Goal</h1>
+        <h1 class="gradient-text">Mission</h1>
         <p class="lead">
             Bridging the gap between technical scientific research and public
             understanding.

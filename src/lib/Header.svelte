@@ -11,12 +11,13 @@
     </div>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
-      <li><a href="/about">Our Goal</a></li>
-      <li><a href="/contributors">Contributors</a></li>
-      <li><a href="/approach">Approach</a></li>
-      <li><a href="/journal">Journal</a></li>
-      <li><a href="/photos">Photos</a></li>
-      <li><a href="/contact" class="contact-cta">Contact & Contribute</a></li>
+      <li><a href="/mission">Mission</a></li>
+      <li><a href="/authors">About the Authors</a></li>
+      <li><a href="/approach">Our Approach</a></li>
+      <li><a href="/why-glaciers-matter">Why Glaciers Matter</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/lesson-plans">Sample Lesson Plans</a></li>
+      <li><a href="/contact" class="contact-cta">Contact</a></li>
     </ul>
   </nav>
 </header>

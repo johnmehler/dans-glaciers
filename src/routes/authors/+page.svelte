@@ -1,10 +1,10 @@
 <svelte:head>
-    <title>Contributors - Glacier Archive Project</title>
+    <title>About the Authors - Glacier Archive Project</title>
 </svelte:head>
 
 <section class="contributors-container">
     <div class="header-section">
-        <h1 class="gradient-text">Project Authors</h1>
+        <h1 class="gradient-text">About the Authors</h1>
         <p class="lead">Meet the team behind the lens and the data.</p>
     </div>
 

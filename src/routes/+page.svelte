@@ -15,8 +15,8 @@
 			through the lens of history.
 		</p>
 		<div class="hero-actions">
-			<a href="/photos" class="btn btn-primary">View Photo Library</a>
-			<a href="/about" class="btn btn-secondary">Our Goal</a>
+			<a href="/gallery" class="btn btn-primary">View Gallery</a>
+			<a href="/mission" class="btn btn-secondary">Our Mission</a>
 		</div>
 	</div>
 </section>

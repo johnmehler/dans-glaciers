@@ -1,10 +1,10 @@
 <svelte:head>
-    <title>Contact & Contribute - Glacier Archive Project</title>
+    <title>Contact - Glacier Archive Project</title>
 </svelte:head>
 
 <section class="contact-container">
     <div class="header-section">
-        <h1 class="gradient-text">Contact or Contribute</h1>
+        <h1 class="gradient-text">Contact</h1>
         <p class="lead">
             We welcome collaboration from researchers, mountaineers, and the
             public.

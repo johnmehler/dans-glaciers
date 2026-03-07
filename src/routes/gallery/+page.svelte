@@ -1,10 +1,10 @@
 <svelte:head>
-    <title>Photo Library - Glacier Photography Project</title>
+    <title>Gallery - Glacier Archive Project</title>
 </svelte:head>
 
 <section class="photos-container">
     <div class="header">
-        <h1 class="gradient-text">Photo Library</h1>
+        <h1 class="gradient-text">Gallery</h1>
         <p>A collection of comparisons and field recordings.</p>
     </div>
 
