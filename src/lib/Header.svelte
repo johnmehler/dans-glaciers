@@ -13,11 +13,11 @@
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li class="sep">|</li>
-      <li><a href="/authors">About</a></li>
+      <li><a href="/about">About</a></li>
       <li class="sep">|</li>
       <li><a href="/approach">Approach</a></li>
       <li class="sep">|</li>
-      <li><a href="/mission">Journal</a></li>
+      <li><a href="/journal">Journal</a></li>
       <li class="sep">|</li>
       <li><a href="/gallery">Gallery</a></li>
       <li class="sep">|</li>
