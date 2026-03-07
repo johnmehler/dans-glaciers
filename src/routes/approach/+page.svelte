@@ -1,83 +1,108 @@
 <svelte:head>
-    <title>Our Approach - Glacier Photography Project</title>
+    <title>Our Approach - Glacier Archive Project</title>
 </svelte:head>
 
 <section class="approach-container">
     <div class="header-section">
-        <h1 class="gradient-text">The Scientific Approach</h1>
+        <h1 class="gradient-text">Our Approach</h1>
         <p class="lead">
-            Merging historical accuracy with modern technology to document
-            glacial retreat.
+            Merging historical archive research with modern field methodology
+            and data science.
         </p>
     </div>
 
-    <div class="methodology-grid">
+    <div class="intro-glass glass">
+        <p>
+            The Glacier Archive Project combines historical research, field
+            photography, geospatial data, and emerging analytical tools to
+            document glacier change and make that information accessible to a
+            broad audience. Our goal is to build a visual and data-driven
+            archive that illustrates how alpine glaciers have evolved over time.
+        </p>
+    </div>
+
+    <div class="method-grid">
         <div class="card glass">
-            <h3>1. Historical Sourcing</h3>
+            <div class="icon">🔍</div>
+            <h3>Historical Research</h3>
             <p>
-                We begin by scouring archival collections—from national
-                libraries to private estates—to find high-quality photographs of
-                Swiss glaciers taken between 1880 and 1950.
+                We identify and catalog historical glacier photographs from
+                archives, publications, and private collections. Physical prints
+                or slides are digitized through high-resolution scanning and
+                cataloged with metadata including location, vantage point, and
+                date.
             </p>
         </div>
+
         <div class="card glass">
-            <h3>2. Precise Re-location</h3>
+            <div class="icon">🏔️</div>
+            <h3>Fieldwork</h3>
             <p>
-                Using GPS data, terrain analysis, and visual cues (jagged peaks,
-                unique rock formations), we identify the exact vantage point of
-                the original photographer.
+                Using maps, terrain analysis, and GIS data, we locate the
+                original camera positions. We then recreate those photographs
+                from the exact same vantage points to provide a powerful visual
+                comparison of glacier change across decades.
             </p>
         </div>
+
         <div class="card glass">
-            <h3>3. Repeat Photography</h3>
+            <div class="icon">📊</div>
+            <h3>Data Analysis</h3>
             <p>
-                We recreate the shot using professional mirrorless cameras,
-                matching the focal length, lighting conditions (where possible),
-                and framing of the archival image.
+                Images are paired with additional datasets such as satellite
+                imagery and elevation data. This supports the creation of
+                three-dimensional or interactive visualizations that allow
+                viewers to explore glacier landscapes in new ways.
+            </p>
+        </div>
+
+        <div class="card glass">
+            <div class="icon">🤖</div>
+            <h3>AI Tools</h3>
+            <p>
+                We explore how artificial intelligence can assist with
+                organizing large image archives and identifying geographic
+                features, helping translate complex environmental information
+                into accessible public formats.
             </p>
         </div>
     </div>
 
-    <div class="technical-details">
-        <h2>Technical Methodology</h2>
-        <div class="tech-row">
-            <div class="tech-content">
-                <h3>Field Documentation</h3>
+    <div class="detailed-sections">
+        <div class="section-row">
+            <div class="section-content">
+                <h2>Expert Insights & Education</h2>
                 <p>
-                    Every expedition is documented with meticulous field notes.
-                    We record altitudes, weather conditions, and the logistical
-                    challenges of reaching remote glacial tongues. As a Swiss
-                    citizen familiar with these ranges, I utilize local
-                    knowledge to navigate safely while carrying heavy optical
-                    equipment.
+                    Beyond photography, we conduct interviews with researchers,
+                    glaciologists, and experts across disciplines. These
+                    conversations help us develop educational materials that
+                    explain how glaciers function, why they matter, and what
+                    these changes mean for surrounding communities and
+                    ecosystems.
                 </p>
             </div>
-            <div class="tech-image">
+            <div class="section-image">
                 <img
                     src="/6.png"
-                    alt="Field Equipment"
-                    class="placeholder-img"
+                    alt="Educational Fieldwork"
+                    class="side-img"
                 />
             </div>
         </div>
 
-        <div class="tech-row reverse">
-            <div class="tech-content">
-                <h3>Image Processing</h3>
+        <div class="section-row reverse">
+            <div class="section-content">
+                <h2>Citizen Science & Engagement</h2>
                 <p>
-                    Post-processing focuses on alignment and color correction to
-                    ensure the comparison with historical black-and-white plates
-                    is as accurate as possible. We use specialized software to
-                    overlay images and calculate volumetric retreat where
-                    visible.
+                    We are developing opportunities for the public to engage
+                    with the archive directly. This includes collaborative
+                    efforts like contributing historical photographs, helping
+                    identify specific locations in archival images, and
+                    expanding the scope of the archive over time.
                 </p>
             </div>
-            <div class="tech-image">
-                <img
-                    src="/7.png"
-                    alt="Editing Process"
-                    class="placeholder-img"
-                />
+            <div class="section-image">
+                <img src="/7.png" alt="Public Engagement" class="side-img" />
             </div>
         </div>
     </div>
@@ -85,98 +110,119 @@
 
 <style>
     .approach-container {
-        padding: 4rem 2rem;
+        padding: 8rem 2rem 4rem;
         max-width: 1200px;
         margin: 0 auto;
     }
 
     .header-section {
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
     }
 
     .gradient-text {
-        font-size: 3.5rem;
+        font-size: 4rem;
         background: linear-gradient(135deg, #2af598 0%, #009efd 100%);
-        -webkit-background-clip: text;
         background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 1rem;
     }
 
     .lead {
-        font-size: 1.25rem;
-        color: #666;
+        font-size: 1.5rem;
+        color: var(--gray);
+        margin-top: 1rem;
     }
 
-    .methodology-grid {
+    .intro-glass {
+        padding: 3rem;
+        border-radius: 32px;
+        margin-bottom: 4rem;
+        font-size: 1.35rem;
+        line-height: 1.8;
+        color: #334155;
+        text-align: center;
+    }
+
+    .method-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 2rem;
         margin-bottom: 6rem;
     }
 
     .card {
         padding: 2.5rem;
-        border-radius: 20px;
-        background: #fff;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 24px;
         transition: transform 0.3s ease;
     }
 
     .card:hover {
-        transform: translateY(-10px);
+        transform: translateY(-8px);
+    }
+
+    .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .card h3 {
-        margin-bottom: 1rem;
-        color: #333;
         font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
     }
 
-    .glass {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+    .card p {
+        font-size: 1.05rem;
+        color: #475569;
+        line-height: 1.7;
     }
 
-    .tech-row {
+    .detailed-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .section-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
         align-items: center;
-        margin-bottom: 4rem;
     }
 
-    .tech-row.reverse {
+    .section-row.reverse {
         direction: rtl;
     }
-    .tech-row.reverse .tech-content {
+    .section-row.reverse .section-content {
         direction: ltr;
     }
 
-    .placeholder-img {
-        width: 100%;
-        aspect-ratio: 16/9;
-        background: #e0e0e0;
-        border-radius: 12px;
-        display: block;
-        object-fit: cover;
-    }
-
-    h2 {
+    .section-content h2 {
         font-size: 2.5rem;
-        margin-bottom: 3rem;
-        text-align: center;
+        margin-bottom: 1.5rem;
+        color: var(--dark);
     }
 
-    @media (max-width: 768px) {
-        .tech-row {
+    .section-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #334155;
+    }
+
+    .side-img {
+        width: 100%;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 900px) {
+        .section-row {
             grid-template-columns: 1fr;
             gap: 2rem;
         }
-        .gradient-text {
-            font-size: 2.5rem;
+        .header-section h1 {
+            font-size: 3rem;
         }
     }
 </style>
