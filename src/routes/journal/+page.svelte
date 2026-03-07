@@ -8,29 +8,38 @@
 
 <div class="mission-page">
     <section class="content-section">
-        <h1>Mission</h1>
-        <p>
-            To document and communicate the changing state of the world’s
-            glaciers through repeat photography, geospatial data, and open
-            scientific collaboration, creating an accessible archive for
-            researchers, educators, and the public.
-        </p>
+        <div class="mission-vision-goals">
+            <div class="goal-card">
+                <h1>Mission</h1>
+                <p>
+                    To document and communicate the changing state of the
+                    world’s glaciers through repeat photography, geospatial
+                    data, and open scientific collaboration, creating an
+                    accessible archive for researchers, educators, and the
+                    public.
+                </p>
+            </div>
 
-        <h1>Vision</h1>
-        <p>
-            A global, open archive of glacier imagery, data, and accessible
-            educational content that enables scientists, citizen observers, and
-            communities to better understand how glacier change affects
-            ecosystems, economies, and societies.
-        </p>
+            <div class="goal-card">
+                <h1>Vision</h1>
+                <p>
+                    A global, open archive of glacier imagery, data, and
+                    accessible educational content that enables scientists,
+                    citizen observers, and communities to better understand how
+                    glacier change affects ecosystems, economies, and societies.
+                </p>
+            </div>
 
-        <h1>Project Goals</h1>
-        <ul>
-            <li>Document landscape change</li>
-            <li>Publish accessible expert discussion</li>
-            <li>Share our field experience</li>
-            <li>Build an AI-enabled public archive</li>
-        </ul>
+            <div class="goal-card">
+                <h1>Project Goals</h1>
+                <ul>
+                    <li>Document landscape change</li>
+                    <li>Publish accessible expert discussion</li>
+                    <li>Share our field experience</li>
+                    <li>Build an AI-enabled public archive</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="updates-section glass">
@@ -69,7 +78,7 @@
 
 <style>
     .mission-page {
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: calc(var(--header-height) + var(--section-padding)) 2rem
             var(--section-padding);
@@ -79,18 +88,25 @@
         margin-bottom: 4rem;
     }
 
-    h1 {
-        font-size: 2.5rem;
-        color: var(--primary);
-        margin: 2rem 0 1rem;
+    .mission-vision-goals {
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
     }
 
-    h1:first-child {
-        margin-top: 0;
+    .goal-card {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        color: var(--primary);
+        margin: 0 0 1.5rem;
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         line-height: 1.8;
         color: var(--dark);
         margin-bottom: 2rem;
@@ -102,7 +118,7 @@
     }
 
     ul li {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         margin-bottom: 1rem;
         padding-left: 1.5rem;
         position: relative;
@@ -143,5 +159,16 @@
     .update-card p {
         font-size: 1.1rem;
         margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+        .mission-vision-goals {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .goal-card {
+            min-width: 100%;
+        }
     }
 </style>

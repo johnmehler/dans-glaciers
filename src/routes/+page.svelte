@@ -126,7 +126,6 @@
 	.hero {
 		height: 55vh;
 		background-color: var(--dark);
-		background-image: url("$lib/assets/banner.jpg");
 		background-size: cover;
 		background-position: center;
 		position: relative;
