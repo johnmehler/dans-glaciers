@@ -1,82 +1,130 @@
 <script lang="ts">
-	// We will add featured photos here later
+	import melt1 from "$lib/assets/melt_part_1.jpg";
+	import melt2 from "$lib/assets/melt_part_2.jpg";
+	import melt3 from "$lib/assets/melt_part_3.jpg";
+
+	let activeSlide = 0;
+	const slides = [melt1, melt2, melt3];
+
+	function nextSlide() {
+		activeSlide = (activeSlide + 1) % slides.length;
+	}
+
+	function prevSlide() {
+		activeSlide = (activeSlide - 1 + slides.length) % slides.length;
+	}
 </script>
 
 <svelte:head>
 	<title>Glacier Archive Project</title>
 </svelte:head>
 
+<!-- SECTION 2: Glacier Repeat Photography Project -->
 <section class="hero">
 	<div class="hero-overlay"></div>
 	<div class="hero-content">
-		<h1 class="hero-title">Vanishing Giants</h1>
+		<h1 class="hero-title">Glacier Repeat Photography Project</h1>
 		<p class="hero-subtitle">
-			Exploring and documenting the glacial retreat of the Swiss Alps
-			through the lens of history.
+			Documenting a century of change in the Swiss Alps through historical
+			reproductions and modern field observations.
 		</p>
 		<div class="hero-actions">
 			<a href="/gallery" class="btn btn-primary">View Gallery</a>
-			<a href="/mission" class="btn btn-secondary">Field Journal</a>
+			<a href="/mission" class="btn btn-secondary">Learn More</a>
 		</div>
 	</div>
 </section>
 
-<section class="featured-comparison">
-	<div class="container">
-		<div class="section-header">
-			<h2>A Century of Change</h2>
-			<p>The Aletsch Glacier: 1910 vs 2024</p>
-		</div>
-
-		<div class="comparison-slider">
-			<div class="image-wrapper">
-				<div class="label">1910</div>
-				<img
-					src="/3.png"
-					alt="Aletsch Glacier 1910"
-					class="placeholder-img"
-				/>
-			</div>
-			<div class="image-wrapper">
-				<div class="label">Today</div>
-				<img
-					src="/4.png"
-					alt="Aletsch Glacier Today"
-					class="placeholder-img"
-				/>
-			</div>
-		</div>
+<!-- SECTION 3: Middle -->
+<section class="middle-section container grid">
+	<div class="mission-block">
+		<h2>Our Mission</h2>
+		<p>
+			To document and communicate the changing state of the world’s
+			glaciers through repeat photography, geospatial data, and open
+			scientific collaboration, creating an accessible archive for
+			researchers, educators, and the public.
+		</p>
 	</div>
-</section>
 
-<section class="mission-summary glass">
-	<div class="container grid">
-		<div class="text">
-			<h3>Our Expedition</h3>
+	<div class="goals-block">
+		<h2>Project Goals</h2>
+		<ul class="goals-list">
+			<li>Document landscape change</li>
+			<li>Publish accessible expert discussion</li>
+			<li>Share our field experience</li>
+			<li>Build an AI-enabled public archive</li>
+		</ul>
+	</div>
+
+	<div class="updates-block">
+		<h2>Recent Updates</h2>
+		<div class="update-card glass">
+			<span class="date">March 7, 2026</span>
+			<h3>GlacierArchive.org Launch</h3>
 			<p>
-				Led by Swiss-American explorer Dan Meier, this project treks
-				across the highest peaks of Switzerland to re-capture the exact
-				same photographs taken by pioneers over a hundred years ago.
+				The Glacier Archive website is now live, serving as the public
+				home for our documentation efforts.
 			</p>
-			<ul class="stats">
-				<li><strong>14</strong> Glaciers Documented</li>
-				<li><strong>200+</strong> Historical Archives Indexed</li>
-				<li><strong>4,000m+</strong> Average Expedition Altitude</li>
-			</ul>
 		</div>
-		<div class="image">
-			<img
-				src="/5.png"
-				alt="Expedition Snapshot"
-				class="placeholder-img"
-			/>
+	</div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- SECTION 4: Then & Now -->
+<section class="then-now container">
+	<div class="section-header">
+		<h2>Then & Now</h2>
+	</div>
+
+	<div class="carousel-container">
+		<div class="carousel-slides">
+			{#each slides as slide, i}
+				<div
+					class="slide {activeSlide === i ? 'active' : ''}"
+					aria-hidden={activeSlide !== i}
+				>
+					<img src={slide} alt="Glacier melting phase {i + 1}" />
+				</div>
+			{/each}
 		</div>
+
+		<div class="carousel-controls">
+			<button
+				class="control-btn prev"
+				on:click={prevSlide}
+				aria-label="Previous slide">←</button
+			>
+			<div class="indicators">
+				{#each slides as _, i}
+					<button
+						class="indicator {activeSlide === i ? 'active' : ''}"
+						on:click={() => (activeSlide = i)}
+						aria-label="Go to slide {i + 1}"
+					></button>
+				{/each}
+			</div>
+			<button
+				class="control-btn next"
+				on:click={nextSlide}
+				aria-label="Next slide">→</button
+			>
+		</div>
+
+		<p class="melt-description">
+			Vadret da Morteratsch in 1985, 2006 and 2021. In 1985, the tongue is
+			bulging, but subsequently it is becoming flatter during recession.
+			In the glacier forefield, first willow species are growing, later
+			larches and finally the first pines (pinus silvestris, photos
+			Alean).
+		</p>
 	</div>
 </section>
 
 <style>
 	.hero {
-		height: 90vh;
+		height: 55vh;
 		background-color: var(--dark);
 		background-image: url("$lib/assets/banner.jpg");
 		background-size: cover;
@@ -95,7 +143,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, 0.4);
+		background: rgba(0, 0, 0, 0.5);
 	}
 
 	.hero-content {
@@ -106,27 +154,32 @@
 	}
 
 	.hero-title {
-		font-size: clamp(3rem, 10vw, 6rem);
+		font-size: clamp(2rem, 6vw, 4rem);
 		font-weight: 800;
-		margin-bottom: 1.5rem;
-		letter-spacing: -2px;
+		margin-bottom: 0.75rem;
+		letter-spacing: -1px;
+		line-height: 1.1;
 	}
 
 	.hero-subtitle {
-		font-size: 1.5rem;
-		margin-bottom: 2.5rem;
-		opacity: 0.9;
+		font-size: 1.1rem;
+		margin-bottom: 1.5rem;
+		opacity: 0.95;
 		line-height: 1.4;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.btn {
 		display: inline-block;
-		padding: 1rem 2rem;
+		padding: 0.6rem 1.5rem;
 		border-radius: 50px;
 		font-weight: 600;
 		text-decoration: none;
 		transition: var(--transition);
-		margin: 0.5rem;
+		margin: 0.4rem;
+		font-size: 0.9rem;
 	}
 
 	.btn-primary {
@@ -136,7 +189,8 @@
 
 	.btn-primary:hover {
 		background: var(--primary-dark);
-		transform: scale(1.05);
+		transform: translateY(-2px);
+		box-shadow: 0 10px 20px rgba(0, 158, 253, 0.3);
 	}
 
 	.btn-secondary {
@@ -148,66 +202,190 @@
 
 	.btn-secondary:hover {
 		background: rgba(255, 255, 255, 0.2);
+		transform: translateY(-2px);
+	}
+
+	.middle-section {
+		padding: 2rem 2rem;
+		gap: 3rem;
+	}
+
+	.middle-section h2 {
+		font-size: 1.5rem;
+		color: var(--primary);
+		margin-bottom: 0.75rem;
+	}
+
+	.goals-list {
+		list-style: none;
+	}
+
+	.goals-list li {
+		margin-bottom: 0.4rem;
+		padding-left: 1.5rem;
+		position: relative;
+		font-size: 0.95rem;
+	}
+
+	.goals-list li::before {
+		content: "→";
+		position: absolute;
+		left: 0;
+		color: var(--primary);
+		font-weight: bold;
+	}
+
+	.update-card {
+		padding: 1rem 1.25rem;
+		border-radius: var(--border-radius);
+		border: 1px solid rgba(0, 158, 253, 0.1);
+	}
+
+	.update-card .date {
+		display: block;
+		font-size: 0.8rem;
+		color: var(--gray);
+		margin-bottom: 0.25rem;
+		font-weight: 600;
+	}
+
+	.update-card h3 {
+		font-size: 1.05rem;
+		margin-bottom: 0.5rem;
+		color: var(--dark);
+	}
+
+	.update-card p {
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+
+	.section-divider {
+		border: none;
+		border-top: 1px solid rgba(0, 158, 253, 0.1);
+		max-width: var(--container-width);
+		margin: 0 auto;
+		width: calc(100% - 4rem);
+	}
+
+	.then-now {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.section-header h2 {
+		font-size: 2rem;
+		color: var(--dark);
+		margin-bottom: 0.1rem;
+	}
+
+	.carousel-container {
+		position: relative;
+		max-width: 1000px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	.carousel-slides {
+		position: relative;
+		aspect-ratio: 21/7;
+		background: var(--gray-light);
+		border-radius: var(--border-radius);
+		overflow: hidden;
+	}
+
+	.slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.slide.active {
+		opacity: 1;
+		z-index: 2;
+	}
+
+	.slide img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.carousel-controls {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 0;
+	}
+
+	.control-btn {
+		background: rgba(0, 158, 253, 0.1);
+		border: none;
+		color: var(--primary);
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		cursor: pointer;
+		font-weight: bold;
+		transition: var(--transition);
+	}
+
+	.control-btn:hover {
+		background: var(--primary);
+		color: var(--white);
+	}
+
+	.indicators {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.indicator {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: var(--gray-light);
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		transition: var(--transition);
+	}
+
+	.indicator.active {
+		background: var(--primary);
+		transform: scale(1.2);
+	}
+
+	.melt-description {
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: var(--gray);
+		text-align: center;
+		max-width: 900px;
+		margin: 1.5rem auto 0;
 	}
 
 	.container {
 		max-width: var(--container-width);
 		margin: 0 auto;
-		padding: var(--section-padding) 2rem;
-	}
-
-	.section-header {
-		text-align: center;
-		margin-bottom: 3rem;
-	}
-
-	.comparison-slider {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-	}
-
-	.image-wrapper {
-		position: relative;
-	}
-
-	.label {
-		position: absolute;
-		top: 1rem;
-		left: 1rem;
-		background: rgba(0, 0, 0, 0.6);
-		color: var(--white);
-		padding: 0.25rem 0.75rem;
-		border-radius: 4px;
-		font-size: 0.8rem;
-		z-index: 5;
-	}
-
-	.placeholder-img {
-		width: 100%;
-		aspect-ratio: 4/3;
-		background: var(--gray-light);
-		border-radius: var(--border-radius);
-		object-fit: cover;
 	}
 
 	.grid {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 4rem;
-		align-items: center;
-	}
-
-	.stats {
-		list-style: none;
-		padding: 0;
-		margin-top: 2rem;
-	}
-
-	.stats li {
-		font-size: 1.1rem;
-		margin-bottom: 0.75rem;
-		color: var(--gray);
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 3rem;
 	}
 
 	.glass {
@@ -215,13 +393,19 @@
 		backdrop-filter: blur(10px);
 	}
 
-	@media (max-width: 768px) {
-		.comparison-slider,
+	@media (max-width: 1024px) {
 		.grid {
 			grid-template-columns: 1fr;
+			gap: 3rem;
 		}
+	}
+
+	@media (max-width: 768px) {
 		.hero-title {
-			font-size: 3rem;
+			font-size: 2.5rem;
+		}
+		.carousel-slides {
+			aspect-ratio: 16/9;
 		}
 	}
 </style>

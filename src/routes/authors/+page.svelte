@@ -81,7 +81,7 @@
     .contributors-container {
         padding: calc(var(--header-height) + var(--section-padding)) 2rem
             var(--section-padding);
-        max-width: 1000px;
+        max-width: var(--container-width);
         margin: 0 auto;
     }
 
@@ -103,8 +103,8 @@
 
     .contributor-profile {
         display: grid;
-        grid-template-columns: 350px 1fr;
-        gap: 4rem;
+        grid-template-columns: 240px 1fr;
+        gap: 6rem;
         align-items: start;
     }
 
