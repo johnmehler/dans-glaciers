@@ -16,7 +16,7 @@
 		</p>
 		<div class="hero-actions">
 			<a href="/gallery" class="btn btn-primary">View Gallery</a>
-			<a href="/mission" class="btn btn-secondary">Our Mission</a>
+			<a href="/mission" class="btn btn-secondary">Field Journal</a>
 		</div>
 	</div>
 </section>

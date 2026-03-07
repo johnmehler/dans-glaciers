@@ -12,12 +12,15 @@
   <nav class="container">
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
-      <li><a href="/mission">Mission</a></li>
-      <li><a href="/authors">About the Authors</a></li>
-      <li><a href="/approach">Our Approach</a></li>
-      <li><a href="/why-glaciers-matter">Why Glaciers Matter</a></li>
+      <li class="sep">|</li>
+      <li><a href="/authors">About</a></li>
+      <li class="sep">|</li>
+      <li><a href="/approach">Approach</a></li>
+      <li class="sep">|</li>
+      <li><a href="/mission">Journal</a></li>
+      <li class="sep">|</li>
       <li><a href="/gallery">Gallery</a></li>
-      <li><a href="/lesson-plans">Sample Lesson Plans</a></li>
+      <li class="sep">|</li>
       <li><a href="/contact" class="contact-cta">Contact</a></li>
     </ul>
   </nav>
@@ -67,23 +70,29 @@
   .container {
     flex-grow: 1;
     display: flex;
-    justify-content: flex-end; /* Push links to the right or center as needed */
+    justify-content: flex-end; /* Push links to the right */
     align-items: center;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0; /* Container padding removed since header has it */
+    padding: 0;
   }
 
   .nav-links {
     display: flex;
     list-style: none;
-    gap: var(--gap);
+    gap: 1.5rem; /* Adjusted gap for separators */
     align-items: center;
+  }
+
+  .nav-links li.sep {
+    color: var(--header-text);
+    opacity: 0.3;
+    font-weight: 300;
   }
 
   .nav-links a {
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--header-text);
     transition: var(--transition);
     opacity: 0.8;
@@ -115,6 +124,9 @@
     .logo a {
       font-size: 1.1rem;
       padding: 0.4rem 0.8rem;
+    }
+    .nav-links {
+      gap: 1rem;
     }
   }
 
