@@ -1,4 +1,3 @@
-1. Move the pics from /static/images to /src/lib/assets
 2. Content: 
     Mission
     About the Authors
