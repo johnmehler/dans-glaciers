@@ -1,3 +1,7 @@
+<script>
+    import headshot from "$lib/assets/headshot.png";
+</script>
+
 <svelte:head>
     <title>About the Authors - Glacier Archive Project</title>
 </svelte:head>
@@ -10,7 +14,7 @@
 
     <div class="contributor-profile">
         <div class="profile-image">
-            <img src="/images/headshot.png" alt="Dan Meier" class="headshot" />
+            <img src={headshot} alt="Dan Meier" class="headshot" />
         </div>
 
         <div class="profile-text">

@@ -1,3 +1,7 @@
+<script>
+    import banner from "$lib/assets/banner.jpg";
+</script>
+
 <svelte:head>
     <title>Our Approach - Glacier Archive Project</title>
 </svelte:head>
@@ -79,7 +83,7 @@
             </div>
             <div class="tech-image">
                 <img
-                    src="/images/banner.jpg"
+                    src={banner}
                     alt="Glacier Fieldwork Banner"
                     class="side-img"
                 />

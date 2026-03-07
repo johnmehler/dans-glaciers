@@ -3,12 +3,13 @@
 </script>
 
 <header>
+  <div class="logo">
+    <a href="/">
+      <span class="logo-text">GLACIER<b>ARCHIVE</b></span>
+    </a>
+  </div>
+
   <nav class="container">
-    <div class="logo">
-      <a href="/">
-        <span class="logo-text">GLACIER<b>ARCHIVE</b></span>
-      </a>
-    </div>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/mission">Mission</a></li>
@@ -30,31 +31,47 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
+    padding: 0 2rem; /* Ensure logo is at the edge with some padding */
     z-index: 1000;
   }
 
-  .container {
-    width: 100%;
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .logo {
+    flex-shrink: 0;
   }
 
   .logo a {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--header-text);
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--white);
     letter-spacing: -0.5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+  }
+
+  .logo a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   .logo-text b {
     color: var(--primary);
+  }
+
+  .container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end; /* Push links to the right or center as needed */
+    align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0; /* Container padding removed since header has it */
   }
 
   .nav-links {
@@ -91,9 +108,22 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
+  @media (max-width: 1024px) {
+    header {
+      padding: 0 1rem;
+    }
+    .logo a {
+      font-size: 1.1rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+
   @media (max-width: 768px) {
     .nav-links {
       display: none;
+    }
+    .container {
+      justify-content: flex-end;
     }
   }
 </style>
