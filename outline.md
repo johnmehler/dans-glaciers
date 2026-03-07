@@ -1,27 +1,3 @@
-GLACIER REPEAT PHOTOGRAPHY PROJECT
-BASIC WEBSITE FUNCTIONAL REQUIREMENTS
-
-PURPOSE
-The website will document and publish the work of a multi-month glacier repeat photography and field documentation project.
-
-The site will:
-• Explain the purpose of the research
-• Document field work through journal entries
-• Publish repeat photography comparisons
-• Serve as a public archive of images and observations
-
-The website should prioritize:
-• Simplicity
-• Reliability
-• Easy content updates
-• Mobile responsiveness
-
-
---------------------------------------------------
-SITE ARCHITECTURE
---------------------------------------------------
-PRIMARY PAGES
-
 # Glacier Repeat Photography Project — Requirements Outline
 
 ## Purpose
@@ -38,11 +14,6 @@ Document and publish a glacier repeat photography project. Prioritize simplicity
 ## Global Layout
 - Header: Logo/title, navigation (Home, About, Approach, Journal, Photos, Contact)
 - Footer: Project name, contact email, copyright, year
-
-## Technical
-- Static site (Next.js, Astro, Hugo, Jekyll, or plain HTML/CSS/JS)
-- Host: Vercel, Netlify, or GitHub Pages
-- Images: Store optimized copies in repo; backup in Google Drive
 
 ## Content Structure
 - Journal: Markdown files (title, date, location, images, text)
@@ -62,4 +33,3 @@ Document and publish a glacier repeat photography project. Prioritize simplicity
 - Contact email
 
 ---
-*Optional future: Glacier map, publications, data downloads, media coverage.*

@@ -1,0 +1,164 @@
+/* app.css - Swiss Glacier Photographer Style */
+
+:root {
+  --snow-white: #f8f9fa;
+  --glacier-blue: #a7c7e7;
+  --rock-grey: #6e7b8b;
+  --alpine-green: #4e7265;
+  --ice-black: #222831;
+  --sun-gold: #ffe066;
+  --accent-blue: #0077b6;
+  --text-dark: #222;
+  --text-light: #fff;
+}
+
+body {
+  background: var(--snow-white);
+  color: var(--text-dark);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+}
+
+header, nav, .header {
+  background: linear-gradient(90deg, var(--glacier-blue) 0%, var(--snow-white) 100%);
+  color: var(--ice-black);
+  box-shadow: 0 2px 8px rgba(110, 123, 139, 0.05);
+}
+
+footer, .footer {
+  background: var(--snow-white);
+  color: var(--rock-grey);
+  border-top: 1px solid var(--glacier-blue);
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--alpine-green);
+  text-decoration: underline;
+}
+
+main {
+  background: var(--snow-white);
+  padding: 2rem 1rem 1rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ice-black);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  border-radius: 4px;
+  border: 1px solid var(--glacier-blue);
+  padding: 0.5em 1em;
+  background: var(--snow-white);
+  color: var(--ice-black);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+button:hover, input:focus, textarea:focus {
+  border-color: var(--accent-blue);
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--snow-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--glacier-blue);
+  border-radius: 5px;
+}
+
+/* Subtle photo frame */
+img {
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(110, 123, 139, 0.10);
+  max-width: 100%;
+  height: auto;
+  background: var(--snow-white);
+}
+
+/* Accent for highlights */
+.mark {
+  background: var(--sun-gold);
+  color: var(--ice-black);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  main {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .header {
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.7rem 0.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding-left: 0;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  main {
+    padding: 0.7rem 0.2rem;
+    font-size: 0.98rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .footer {
+    font-size: 0.9rem;
+    padding: 1rem 0 0.7rem 0;
+  }
+}
