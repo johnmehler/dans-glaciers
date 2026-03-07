@@ -22,7 +22,7 @@
       <li><a href="/approach">Approach</a></li>
       <li><a href="/journal">Journal</a></li>
       <li><a href="/photos">Photos</a></li>
-      <li><a href="/contact" class="contact-cta">Contact</a></li>
+      <li><a href="/contact" class="contact-cta">Contact & Contribute</a></li>
     </ul>
   </nav>
 </header>

@@ -1,36 +1,71 @@
 <svelte:head>
-    <title>Contact - Glacier Photography Project</title>
+    <title>Contact & Contribute - Glacier Archive Project</title>
 </svelte:head>
 
 <section class="contact-container">
-    <div class="contact-grid">
-        <div class="info">
-            <h1 class="gradient-text">Get in Touch</h1>
-            <p>
-                Whether you have questions about the methodology, want to
-                collaborate, or have historical photographs of Swiss glaciers to
-                share, I'd love to hear from you.
-            </p>
+    <div class="header-section">
+        <h1 class="gradient-text">Contact or Contribute</h1>
+        <p class="lead">
+            We welcome collaboration from researchers, mountaineers, and the
+            public.
+        </p>
+    </div>
 
-            <div class="contact-methods">
-                <div class="method">
-                    <strong>Email</strong>
-                    <span>dan.meier@glacierproject.ch</span>
-                </div>
-                <div class="method">
-                    <strong>Location</strong>
-                    <span>Valais, Switzerland</span>
-                </div>
+    <div class="contact-grid">
+        <div class="info-side">
+            <div class="intro-box glass">
+                <h2>Contact</h2>
+                <p>
+                    If you have questions about the Glacier Archive Project, are
+                    interested in collaborating, or would like to share
+                    information related to glaciers or historical photography,
+                    we welcome hearing from you.
+                </p>
+                <p class="direct-email">
+                    <strong>Email:</strong>
+                    <a href="mailto:admin@glacierarchive.org"
+                        >admin@glacierarchive.org</a
+                    >
+                </p>
+            </div>
+
+            <div class="interest-list">
+                <h3>We are particularly interested in hearing from:</h3>
+                <ul>
+                    <li>
+                        Researchers and scientists working on glaciers or alpine
+                        environments
+                    </li>
+                    <li>
+                        Archives or institutions with historical glacier
+                        photographs
+                    </li>
+                    <li>
+                        Mountaineers, hikers, and photographers with historical
+                        images
+                    </li>
+                    <li>
+                        Educators interested in using Glacier Archive materials
+                    </li>
+                </ul>
+                <p class="note">
+                    <i
+                        >While we may not be able to respond immediately during
+                        fieldwork periods, we will make every effort to reply as
+                        soon as possible.</i
+                    >
+                </p>
             </div>
         </div>
 
         <form class="contact-form glass">
+            <h3>Send a Message</h3>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="Your Name" required />
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email address</label>
                 <input
                     type="email"
                     id="email"
@@ -42,91 +77,190 @@
                 <label for="message">Message</label>
                 <textarea
                     id="message"
-                    rows="5"
-                    placeholder="How can I help you?"
+                    rows="6"
+                    placeholder="How can we collaborate or help you?"
                     required
                 ></textarea>
             </div>
             <button type="submit" class="submit-btn">Send Message</button>
+            <p class="form-note">
+                We will do our best to provide a timely response.
+            </p>
         </form>
+    </div>
+
+    <div class="contribute-section glass">
+        <div class="contribute-header">
+            <h2>Contribute Historical Photos</h2>
+            <p>
+                Historical photographs are one of the most valuable tools for
+                understanding how glaciers have changed through time. Many
+                important images exist outside of formal archives in personal
+                collections, old mountaineering records, guidebooks, or family
+                photo albums.
+            </p>
+        </div>
+
+        <div class="contribute-grid">
+            <div class="guidelines">
+                <h3>What is especially helpful:</h3>
+                <ul>
+                    <li>
+                        Images that clearly show glacier fronts or glacier
+                        valleys
+                    </li>
+                    <li>Photos where the approximate location is known</li>
+                    <li>
+                        Images taken from trails, huts, overlooks, or well-known
+                        viewpoints
+                    </li>
+                    <li>
+                        Photographs from earlier decades that allow repeat
+                        photography today
+                    </li>
+                </ul>
+            </div>
+
+            <div class="submission-info">
+                <h3>How to contribute:</h3>
+                <p>
+                    If you would like to contribute, please include as much
+                    information as possible:
+                </p>
+                <ul class="meta-list">
+                    <li>Glacier name, Country or Region</li>
+                    <li>Approximate location or viewpoint</li>
+                    <li>Approximate year and Photographer (if known)</li>
+                </ul>
+                <div class="cta-box">
+                    <p>
+                        Images may be submitted through the form above or by
+                        emailing:
+                    </p>
+                    <a href="mailto:admin@glacierarchive.org" class="email-link"
+                        >admin@glacierarchive.org</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="terms-box">
+            <p>
+                <strong>Credit & Rights:</strong> Contributors will be credited when
+                their materials are used in the archive unless they prefer to remain
+                anonymous. By submitting materials, you confirm you have the right
+                to share the content for educational and research purposes.
+            </p>
+        </div>
     </div>
 </section>
 
 <style>
     .contact-container {
-        padding: 6rem 2rem;
-        max-width: 1100px;
+        padding: 8rem 2rem 4rem;
+        max-width: 1200px;
         margin: 0 auto;
+    }
+
+    .header-section {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    .gradient-text {
+        font-size: 4rem;
+        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .lead {
+        font-size: 1.5rem;
+        color: var(--gray);
+        margin-top: 1rem;
     }
 
     .contact-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+        margin-bottom: 6rem;
         align-items: start;
     }
 
-    .gradient-text {
-        font-size: 3.5rem;
-        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .intro-box h2 {
         margin-bottom: 1.5rem;
     }
 
-    .info p {
+    .intro-box p {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .direct-email a {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    .interest-list h3 {
         font-size: 1.2rem;
-        line-height: 1.6;
-        color: #555;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
     }
 
-    .contact-methods {
+    .interest-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .interest-list li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         display: flex;
-        flex-direction: column;
-        gap: 2rem;
+        align-items: center;
+        gap: 0.75rem;
     }
 
-    .method strong {
-        display: block;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        color: #888;
-        margin-bottom: 0.25rem;
+    .interest-list li::before {
+        content: "•";
+        color: var(--primary);
+        font-weight: bold;
     }
 
-    .method span {
-        font-size: 1.25rem;
-        color: #333;
-        font-weight: 500;
+    .note {
+        margin-top: 2rem;
+        color: var(--gray);
+        font-size: 0.95rem;
     }
 
     .contact-form {
         padding: 3rem;
-        border-radius: 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+        border-radius: 32px;
+    }
+
+    .contact-form h3 {
+        margin-bottom: 2rem;
     }
 
     .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
         font-weight: 600;
         font-size: 0.9rem;
     }
 
     input,
     textarea {
+        width: 100%;
         padding: 1rem;
         border-radius: 12px;
-        border: 1px solid #ddd;
-        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid #e2e8f0;
+        background: white;
         font-size: 1rem;
         transition: border-color 0.3s ease;
     }
@@ -134,38 +268,118 @@
     input:focus,
     textarea:focus {
         outline: none;
-        border-color: #009efd;
+        border-color: var(--primary);
     }
 
     .submit-btn {
-        background: #1a1a1a;
+        width: 100%;
+        background: var(--dark);
         color: white;
         padding: 1rem;
-        border-radius: 12px;
-        font-weight: 600;
+        border-radius: 50px;
+        font-weight: 700;
         cursor: pointer;
-        transition: background 0.3s ease;
         border: none;
+        transition:
+            transform 0.3s ease,
+            background 0.3s ease;
+        margin-bottom: 1rem;
     }
 
     .submit-btn:hover {
-        background: #333;
+        background: #334155;
+        transform: translateY(-2px);
     }
 
-    .glass {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    .form-note {
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--gray);
     }
 
-    @media (max-width: 850px) {
-        .contact-grid {
+    .contribute-section {
+        padding: 4rem;
+        border-radius: 40px;
+    }
+
+    .contribute-header {
+        max-width: 800px;
+        margin-bottom: 4rem;
+    }
+
+    .contribute-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contribute-header p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        color: #475569;
+    }
+
+    .contribute-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .contribute-grid h3 {
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .contribute-grid ul {
+        padding-left: 1.2rem;
+    }
+
+    .contribute-grid li {
+        margin-bottom: 1rem;
+        color: #475569;
+    }
+
+    .meta-list {
+        list-style: none;
+        padding-left: 0 !important;
+    }
+
+    .meta-list li::before {
+        content: "→ ";
+        color: var(--primary);
+        font-weight: bold;
+    }
+
+    .cta-box {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        margin-top: 2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .email-link {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--primary);
+    }
+
+    .terms-box {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        padding-top: 2rem;
+        font-size: 0.95rem;
+        color: var(--gray);
+    }
+
+    @media (max-width: 900px) {
+        .contact-grid,
+        .contribute-grid {
             grid-template-columns: 1fr;
-            gap: 3rem;
         }
-        .contact-container {
-            padding: 3rem 1.5rem;
+        .contribute-section {
+            padding: 2rem;
         }
     }
 </style>
