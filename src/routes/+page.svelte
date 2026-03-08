@@ -113,18 +113,21 @@
 		</div>
 
 		<p class="melt-description">
-			Vadret da Morteratsch in 1985, 2006 and 2021. In 1985, the tongue is
-			bulging, but subsequently it is becoming flatter during recession.
-			In the glacier forefield, first willow species are growing, later
-			larches and finally the first pines (pinus silvestris, photos
-			Alean).
+			The Morteratsch glacier in southwest Switzerland photographed from
+			the same position in 1985, 2006, and 2021. In 1985 the front of the
+			glacier is mere feet from the viewpoint with bulging ice. By 2006
+			the glacier is a distant background with early high-altitude plants
+			like willow and larch beginning to grow. By 2021 the glacier is a
+			distant whisp of white with the first pines beginning to grow. This
+			is the glacier that inspired the project and the photo I am most
+			looking forward to repeating.
 		</p>
 	</div>
 </section>
 
 <style>
 	.hero {
-		height: 55vh;
+		height: 35vh;
 		background-color: var(--dark);
 		background-size: cover;
 		background-position: center;

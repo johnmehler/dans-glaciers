@@ -1,2 +1,2 @@
 1. The section with Glacier Repeat Photography Project should be less tall. It takes up too much space.
-2. 
+2. On mobile, the nav-links CSS should be display: none. Instead, there should be a hamburger menu on the right side. The hamburger menu should be invisible on desktop. When clicked, it should open a drawer that slides down from the top. Tapping outside the drawer should close it. Use normal best practices for mobile navigation.
