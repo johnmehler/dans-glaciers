@@ -1,10 +1,10 @@
 <script lang="ts">
-	import melt1 from "$lib/assets/melt_part_1.jpg";
-	import melt2 from "$lib/assets/melt_part_2.jpg";
-	import melt3 from "$lib/assets/melt_part_3.jpg";
+	import carousel1 from "$lib/assets/carousel_1.png";
+	import carousel2 from "$lib/assets/carousel_2.png";
+	import carousel3 from "$lib/assets/carousel_3.png";
 
 	let activeSlide = 0;
-	const slides = [melt1, melt2, melt3];
+	const slides = [carousel1, carousel2, carousel3];
 
 	function nextSlide() {
 		activeSlide = (activeSlide + 1) % slides.length;
