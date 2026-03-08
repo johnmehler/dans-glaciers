@@ -1,47 +1,12 @@
 <svelte:head>
-    <title>Mission & Vision - Glacier Archive Project</title>
+    <title>Journal - Glacier Archive Project</title>
     <meta
         name="description"
-        content="Mission, vision, and goals of the Glacier Archive Project."
+        content="Recent updates and journal entries from the Glacier Archive Project."
     />
 </svelte:head>
 
-<div class="mission-page">
-    <section class="content-section">
-        <div class="mission-vision-goals">
-            <div class="goal-card">
-                <h1>Mission</h1>
-                <p>
-                    To document and communicate the changing state of the
-                    world’s glaciers through repeat photography, geospatial
-                    data, and open scientific collaboration, creating an
-                    accessible archive for researchers, educators, and the
-                    public.
-                </p>
-            </div>
-
-            <div class="goal-card">
-                <h1>Vision</h1>
-                <p>
-                    A global, open archive of glacier imagery, data, and
-                    accessible educational content that enables scientists,
-                    citizen observers, and communities to better understand how
-                    glacier change affects ecosystems, economies, and societies.
-                </p>
-            </div>
-
-            <div class="goal-card">
-                <h1>Project Goals</h1>
-                <ul>
-                    <li>Document landscape change</li>
-                    <li>Publish accessible expert discussion</li>
-                    <li>Share our field experience</li>
-                    <li>Build an AI-enabled public archive</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
+<div class="journal-page">
     <section class="updates-section glass">
         <h2>Recent Updates:</h2>
         <div class="update-card">
@@ -77,59 +42,11 @@
 </div>
 
 <style>
-    .mission-page {
+    .journal-page {
         max-width: 1200px;
         margin: 0 auto;
         padding: calc(var(--header-height) + var(--section-padding)) 2rem
             var(--section-padding);
-    }
-
-    .content-section {
-        margin-bottom: 4rem;
-    }
-
-    .mission-vision-goals {
-        display: flex;
-        gap: 3rem;
-        flex-wrap: wrap;
-    }
-
-    .goal-card {
-        flex: 1;
-        min-width: 300px;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-        color: var(--primary);
-        margin: 0 0 1.5rem;
-    }
-
-    p {
-        font-size: 1.15rem;
-        line-height: 1.8;
-        color: var(--dark);
-        margin-bottom: 2rem;
-    }
-
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    ul li {
-        font-size: 1.15rem;
-        margin-bottom: 1rem;
-        padding-left: 1.5rem;
-        position: relative;
-    }
-
-    ul li::before {
-        content: "•";
-        color: var(--primary);
-        position: absolute;
-        left: 0;
-        font-weight: bold;
     }
 
     .updates-section {
@@ -156,19 +73,10 @@
         font-size: 1rem;
     }
 
-    .update-card p {
+    p {
         font-size: 1.1rem;
+        line-height: 1.7;
+        color: var(--dark);
         margin-bottom: 1.2rem;
-    }
-
-    @media (max-width: 768px) {
-        .mission-vision-goals {
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .goal-card {
-            min-width: 100%;
-        }
     }
 </style>
