@@ -1,5 +1,6 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
   let isMenuOpen = false;
 
   function toggleMenu() {
@@ -69,7 +70,10 @@
     tabindex="-1"
     aria-label="Close menu"
   ></div>
-  <div class="mobile-drawer" class:open={isMenuOpen}>
+  <div
+    class="mobile-drawer"
+    transition:fly={{ y: -50, duration: 400, easing: quintOut }}
+  >
     <ul class="mobile-nav-links">
       <li><a href="/" on:click={closeMenu}>Home</a></li>
       <li><a href="/about" on:click={closeMenu}>About</a></li>
@@ -252,13 +256,7 @@
     border-bottom: 2px solid var(--primary);
     padding: 2rem;
     z-index: 1000;
-    transform: translateY(-100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-
-  .mobile-drawer.open {
-    transform: translateY(0);
   }
 
   .mobile-nav-links {

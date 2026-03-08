@@ -59,14 +59,16 @@
 
 	<div class="updates-block">
 		<h2>Recent Updates</h2>
-		<div class="update-card glass">
-			<span class="date">March 7, 2026</span>
-			<h3>GlacierArchive.org Launch</h3>
-			<p>
-				The Glacier Archive website is now live, serving as the public
-				home for our documentation efforts.
-			</p>
-		</div>
+		<a href="/journal" class="update-card-link">
+			<div class="update-card glass">
+				<span class="date">March 7, 2026</span>
+				<h3>GlacierArchive.org Launch</h3>
+				<p>
+					The Glacier Archive website is now live, serving as the
+					public home for our documentation efforts.
+				</p>
+			</div>
+		</a>
 	</div>
 </section>
 
@@ -237,10 +239,28 @@
 		font-weight: bold;
 	}
 
+	.update-card-link {
+		text-decoration: none;
+		display: block;
+		color: inherit;
+		transition: var(--transition);
+	}
+
+	.update-card-link:hover {
+		transform: translateY(-4px);
+	}
+
+	.update-card-link:hover .update-card {
+		border-color: var(--primary);
+		box-shadow: 0 10px 30px rgba(0, 158, 253, 0.1);
+	}
+
 	.update-card {
 		padding: 1rem 1.25rem;
 		border-radius: var(--border-radius);
 		border: 1px solid rgba(0, 158, 253, 0.1);
+		transition: var(--transition);
+		height: 100%;
 	}
 
 	.update-card .date {
