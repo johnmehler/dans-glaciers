@@ -30,7 +30,7 @@
 		</p>
 		<div class="hero-actions">
 			<a href="/gallery" class="btn btn-primary">View Gallery</a>
-			<a href="/mission" class="btn btn-secondary">Learn More</a>
+			<a href="/approach" class="btn btn-secondary">Learn More</a>
 		</div>
 	</div>
 </section>
