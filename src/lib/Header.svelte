@@ -181,36 +181,54 @@
   .hamburger {
     display: none;
     flex-direction: column;
-    justify-content: space-around;
-    width: 2rem;
-    height: 1.5rem;
-    background: transparent;
-    border: none;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
     cursor: pointer;
     padding: 0;
     z-index: 1002;
+    transition: var(--transition);
+  }
+
+  .hamburger:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
   }
 
   .hamburger span {
-    width: 2rem;
-    height: 0.2rem;
+    display: block;
+    width: 22px;
+    height: 2px;
     background: var(--white);
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    position: absolute;
   }
 
-  .hamburger.open span:first-child {
-    transform: rotate(45deg);
+  .hamburger span:nth-child(1) {
+    transform: translateY(-4px);
+  }
+  .hamburger span:nth-child(2) {
+    transform: translateY(4px);
+  }
+  .hamburger span:nth-child(3) {
+    display: none;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
   }
 
   .hamburger.open span:nth-child(2) {
-    opacity: 0;
+    transform: translateY(0) rotate(-45deg);
   }
 
-  .hamburger.open span:last-child {
-    transform: rotate(-45deg);
+  .hamburger.open span:nth-child(3) {
+    display: none;
   }
 
   /* Mobile Drawer Styles */

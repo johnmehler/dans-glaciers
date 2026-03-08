@@ -120,7 +120,7 @@
 			like willow and larch beginning to grow. By 2021 the glacier is a
 			distant whisp of white with the first pines beginning to grow. This
 			is the glacier that inspired the project and the photo I am most
-			looking forward to repeating.
+			looking forward to repeating. (Photos: J. Alean)
 		</p>
 	</div>
 </section>
