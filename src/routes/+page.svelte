@@ -127,7 +127,7 @@
 
 <style>
 	.hero {
-		height: 35vh;
+		height: 40vh;
 		background-color: var(--dark);
 		background-size: cover;
 		background-position: center;
