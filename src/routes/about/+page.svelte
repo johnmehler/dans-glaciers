@@ -113,6 +113,21 @@
                 </div>
             </div>
         </div>
+
+        <div class="contributor-profile reverse">
+            <div class="profile-image anon-placeholder">GH</div>
+
+            <div class="profile-text">
+                <h2>Ginny Harmon</h2>
+                <p class="subtitle">
+                    Expert glacierologist, V2 climber at earth treks
+                </p>
+
+                <div class="bio-content">
+                    <p>Bio and pic coming soon.</p>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 
@@ -200,15 +215,42 @@
         grid-template-columns: 240px 1fr;
         gap: 4rem;
         align-items: start;
+        margin-bottom: 8rem;
     }
 
-    .headshot {
+    .contributor-profile.reverse {
+        grid-template-columns: 1fr 240px;
+    }
+
+    .contributor-profile.reverse .profile-image {
+        grid-column: 2;
+    }
+
+    .contributor-profile.reverse .profile-text {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: right;
+    }
+
+    .headshot,
+    .anon-placeholder {
         width: 100%;
         border-radius: var(--border-radius);
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         aspect-ratio: 1/1;
         object-fit: cover;
         border: 8px solid var(--white);
+    }
+
+    .anon-placeholder {
+        background: #f1f5f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--gray);
+        letter-spacing: -2px;
     }
 
     .profile-text h2 {
@@ -239,6 +281,15 @@
         .contributor-profile {
             grid-template-columns: 1fr;
             gap: 2rem;
+            margin-bottom: 5rem;
+        }
+        .contributor-profile.reverse {
+            grid-template-columns: 1fr;
+        }
+        .contributor-profile.reverse .profile-image,
+        .contributor-profile.reverse .profile-text {
+            grid-column: 1;
+            text-align: left;
         }
         .profile-image {
             max-width: 300px;
