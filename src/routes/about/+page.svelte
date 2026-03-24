@@ -120,12 +120,37 @@
 
             <div class="profile-text">
                 <h2>Ginny Harmon</h2>
-                <p class="subtitle">
-                    Expert glacierologist, V2 climber at earth treks
-                </p>
+                <p class="subtitle">Project Co-lead</p>
 
                 <div class="bio-content">
-                    <p>Bio and pic coming soon.</p>
+                    <p>
+                        Ginny grew up in New Hampshire with a deep love for the
+                        outdoors. After spending the past 6.5 years living in
+                        Washington, DC, she has come to realize how much she
+                        once took that access to nature for granted.
+                    </p>
+
+                    <p>
+                        Ginny joined Dan on the Glacier Archive Project during a
+                        sabbatical from her professional career in consulting.
+                        Through the project, she is helping document and
+                        communicate glacier change, and contributing to a
+                        broader effort to connect the visible shifts in alpine
+                        landscapes to the wider impacts they can have beyond the
+                        mountains.
+                    </p>
+
+                    <p>
+                        Ginny holds master's degrees in Public Administration
+                        from the Maxwell School of Citizenship and Public
+                        Affairs at Syracuse University and in International
+                        Affairs from the Hertie School of Governance in Berlin.
+                    </p>
+
+                    <p>
+                        In her free time, Ginny can often be found outside
+                        skiing, hiking, or trail running.
+                    </p>
                 </div>
             </div>
         </div>
