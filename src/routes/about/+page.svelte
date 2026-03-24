@@ -1,5 +1,6 @@
 <script>
     import headshot from "$lib/assets/headshot.png";
+    import drewHeadshot from "$lib/assets/drew.png";
 </script>
 
 <svelte:head>
@@ -125,6 +126,56 @@
 
                 <div class="bio-content">
                     <p>Bio and pic coming soon.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contributor-profile">
+            <div class="profile-image">
+                <img src={drewHeadshot} alt="Andrew Gorin" class="headshot" />
+            </div>
+
+            <div class="profile-text">
+                <h2>Andrew (Drew) Gorin, PhD</h2>
+                <p class="subtitle">
+                    Climate & Data Scientist | UC Berkeley PhD
+                </p>
+
+                <div class="bio-content">
+                    <p>
+                        Andrew (Drew) Gorin is a climate and data scientist
+                        whose work integrates remote field expeditions,
+                        laboratory analyses, and computational modeling to
+                        quantify Earth’s changing systems. He is fundamentally
+                        interested in using the chemistry of the rock record to
+                        understand how climate has evolved over the last 20,000
+                        years, bridging the gap between the modern instrumental
+                        record and geologic history. Andrew holds a PhD in Earth
+                        and Planetary Science from the University of California,
+                        Berkeley, and a Master of Science from Boston College.
+                    </p>
+                    <p>
+                        His research into glacial advance-retreat histories led
+                        to a first-author publication in the journal Science
+                        (2024), demonstrating that tropical Andean glacier
+                        retreat is currently at its most extreme level in the
+                        Holocene—a finding that reached a global audience
+                        through coverage in The Washington Post and Reuters.
+                        Beyond terrestrial ice, Andrew has contributed his
+                        analytical and geospatial expertise to NASA’s Mars 2020
+                        Perseverance mission and engineered open-source Python
+                        frameworks for uncertainty quantification used by
+                        international research groups.
+                    </p>
+                    <p>
+                        Outside of his research, Andrew is an avid outdoorsman
+                        who enjoys trail running, cycling, and rock climbing. He
+                        recently spent six weeks hiking the 485-mile Colorado
+                        Trail following the completion of his doctorate. When
+                        indoors, he maintains a professional presence in the
+                        local music scene, performing as a saxophonist with funk
+                        and jazz bands.
+                    </p>
                 </div>
             </div>
         </div>
