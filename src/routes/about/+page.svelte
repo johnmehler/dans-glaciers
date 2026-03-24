@@ -1,6 +1,7 @@
 <script>
     import headshot from "$lib/assets/headshot.png";
     import drewHeadshot from "$lib/assets/drew.png";
+    import ginnyHeadshot from "$lib/assets/ginny.png";
 </script>
 
 <svelte:head>
@@ -116,7 +117,9 @@
         </div>
 
         <div class="contributor-profile reverse">
-            <div class="profile-image anon-placeholder">GH</div>
+            <div class="profile-image">
+                <img src={ginnyHeadshot} alt="Ginny Harmon" class="headshot" />
+            </div>
 
             <div class="profile-text">
                 <h2>Ginny Harmon</h2>
@@ -308,25 +311,13 @@
         text-align: right;
     }
 
-    .headshot,
-    .anon-placeholder {
+    .headshot {
         width: 100%;
         border-radius: var(--border-radius);
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
         aspect-ratio: 1/1;
         object-fit: cover;
         border: 8px solid var(--white);
-    }
-
-    .anon-placeholder {
-        background: #f1f5f9;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        font-weight: 800;
-        color: var(--gray);
-        letter-spacing: -2px;
     }
 
     .profile-text h2 {
