@@ -1,6 +1,6 @@
 <script>
     import headshot from "$lib/assets/headshot.png";
-    import drewHeadshot from "$lib/assets/drew.png";
+    // import drewHeadshot from "$lib/assets/drew.png";
     import ginnyHeadshot from "$lib/assets/ginny.png";
 </script>
 
@@ -158,7 +158,7 @@
             </div>
         </div>
 
-        <div class="contributor-profile">
+        <!-- <div class="contributor-profile">
             <div class="profile-image">
                 <img src={drewHeadshot} alt="Andrew Gorin" class="headshot" />
             </div>
@@ -206,7 +206,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 </div>
 
