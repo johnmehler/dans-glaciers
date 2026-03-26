@@ -59,7 +59,7 @@
 
             <div class="profile-text">
                 <h2>Dan Meier</h2>
-                <p class="subtitle">Founder & Lead Investigator</p>
+                <p class="subtitle">Project Co-Lead</p>
 
                 <div class="bio-content">
                     <p>
@@ -81,13 +81,12 @@
                     </p>
 
                     <p>
-                        Dan began this project during a sabbatical from his
-                        professional career in consulting in order to study
-                        glaciers more closely and document their changes through
-                        repeat photography. The project also explores how modern
-                        tools, including large-scale data analysis and
-                        artificial intelligence, can help document and
-                        communicate glacier change more effectively.
+                        Dan began this project in order to study glaciers more
+                        closely and document their changes through repeat
+                        photography. The project also explores how modern tools,
+                        including large-scale data analysis and artificial
+                        intelligence, can help document and communicate glacier
+                        change more effectively.
                     </p>
 
                     <p>
@@ -123,7 +122,7 @@
 
             <div class="profile-text">
                 <h2>Ginny Harmon</h2>
-                <p class="subtitle">Project Co-lead</p>
+                <p class="subtitle">Project Co-Lead</p>
 
                 <div class="bio-content">
                     <p>

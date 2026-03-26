@@ -60,15 +60,6 @@
         </p>
 
         <p>
-            In addition to fieldwork and data analysis, the project will include
-            interviews with researchers, glaciologists, and other experts
-            working in related disciplines. These conversations will be used to
-            develop accessible educational materials that explain how glaciers
-            function, why they matter, and what changes in these landscapes mean
-            for surrounding communities and ecosystems.
-        </p>
-
-        <p>
             Finally, the Glacier Archive Project aims to develop opportunities
             for citizen scientists and the public to engage with the archive.
             This may include contributing historical photographs, helping
