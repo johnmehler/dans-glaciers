@@ -2,6 +2,7 @@
 	import carousel1 from "$lib/assets/carousel_1.png";
 	import carousel2 from "$lib/assets/carousel_2.png";
 	import carousel3 from "$lib/assets/carousel_3.png";
+	import { posts } from "$lib/journalData";
 
 	let activeSlide = 0;
 	const slides = [carousel1, carousel2, carousel3];
@@ -13,6 +14,8 @@
 	function prevSlide() {
 		activeSlide = (activeSlide - 1 + slides.length) % slides.length;
 	}
+
+	const latestPost = posts[0];
 </script>
 
 <svelte:head>
@@ -59,17 +62,16 @@
 
 	<div class="updates-block">
 		<h2>Recent Updates</h2>
-		<a href="/journal" class="update-card-link">
-			<div class="update-card glass">
-				<span class="date">March 7, 2026</span>
-				<h3>GlacierArchive.org Launch</h3>
-				<p>
-					The Glacier Archive website is now live, serving as the
-					public home for our documentation efforts.
-				</p>
-			</div>
-		</a>
+		{#if latestPost}
+			<a href="/journal" class="update-card-link">
+				<div class="update-card glass">
+					<span class="date">{latestPost.date}</span>
+					<h3>{latestPost.title}</h3>
+				</div>
+			</a>
+		{/if}
 	</div>
+
 </section>
 
 <hr class="section-divider" />
@@ -193,8 +195,6 @@
 
 	.btn-primary:hover {
 		background: var(--primary-dark);
-		transform: translateY(-2px);
-		box-shadow: 0 10px 20px rgba(0, 158, 253, 0.3);
 	}
 
 	.btn-secondary {
@@ -206,7 +206,6 @@
 
 	.btn-secondary:hover {
 		background: rgba(255, 255, 255, 0.2);
-		transform: translateY(-2px);
 	}
 
 	.middle-section {
@@ -246,17 +245,12 @@
 		transition: var(--transition);
 	}
 
-	.update-card-link:hover {
-		transform: translateY(-4px);
-	}
-
 	.update-card-link:hover .update-card {
 		border-color: var(--primary);
-		box-shadow: 0 10px 30px rgba(0, 158, 253, 0.1);
 	}
 
 	.update-card {
-		padding: 1rem 1.25rem;
+		padding: 1.25rem;
 		border-radius: var(--border-radius);
 		border: 1px solid rgba(0, 158, 253, 0.1);
 		transition: var(--transition);
@@ -267,19 +261,14 @@
 		display: block;
 		font-size: 0.8rem;
 		color: var(--gray);
-		margin-bottom: 0.25rem;
+		margin-bottom: 0.5rem;
 		font-weight: 600;
 	}
 
 	.update-card h3 {
-		font-size: 1.05rem;
-		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
 		color: var(--dark);
-	}
-
-	.update-card p {
-		font-size: 0.9rem;
-		line-height: 1.4;
+		margin: 0;
 	}
 
 	.section-divider {
@@ -410,10 +399,6 @@
 		gap: 3rem;
 	}
 
-	.glass {
-		background: var(--glass);
-		backdrop-filter: blur(10px);
-	}
 
 	@media (max-width: 1024px) {
 		.grid {
