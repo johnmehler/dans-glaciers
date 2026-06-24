@@ -42,8 +42,8 @@
       <li><a href="/approach">Approach</a></li>
       <li class="sep">|</li>
       <li><a href="/journal">Journal</a></li>
-      <li class="sep">|</li>
-      <li><a href="/gallery">Gallery</a></li>
+      <!-- <li class="sep">|</li>
+      <li><a href="/gallery">Gallery</a></li> -->
       <li class="sep">|</li>
       <li><a href="/contact" class="contact-cta">Contact</a></li>
     </ul>
@@ -79,7 +79,7 @@
       <li><a href="/about" on:click={closeMenu}>About</a></li>
       <li><a href="/approach" on:click={closeMenu}>Approach</a></li>
       <li><a href="/journal" on:click={closeMenu}>Journal</a></li>
-      <li><a href="/gallery" on:click={closeMenu}>Gallery</a></li>
+      <!-- <li><a href="/gallery" on:click={closeMenu}>Gallery</a></li> -->
       <li>
         <a href="/contact" class="mobile-contact-cta" on:click={closeMenu}
           >Contact</a
